@@ -1,0 +1,208 @@
+/* ===========================
+   BASE GERAL DO SITE
+   =========================== */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+}
+
+body.bg-light {
+  background-color: #f7f7f7;
+}
+
+/* ===========================
+   LOGOTIPO GRAFX
+   =========================== */
+.grafx-logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.small-logo {
+  max-width: 100px;
+  height: auto;
+}
+
+/* inputs visual like wireframe: thin border */
+.form-control { 
+  border-width: 1.5px; 
+}
+
+.form-control:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
+}
+
+/* botões dark rounded */
+.btn-dark { 
+  background: #333; 
+  border-color: #333; 
+  border-radius: 8px; 
+}
+
+.btn-dark:hover {
+  background: #555;
+  border-color: #555;
+}
+
+.btn-secondary { 
+  border-radius: 8px; 
+}
+
+/* inputs wide as wireframe */
+.card { 
+  border-radius: 6px; 
+  border: 1px solid #dee2e6;
+}
+
+/* center big logo on login */
+@media (max-width: 768px) {
+  .grafx-logo { 
+    max-width: 140px; 
+  }
+  
+  .small-logo {
+    max-width: 80px;
+  }
+}
+
+/* keep a grid-like subtle background (optional) */
+body.bg-light {
+  background-color: #f7f7f7;
+}
+
+/* BOTÕES EM GRUPO */
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .botoes {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  
+  .botoes .btn {
+    width: 100%;
+  }
+}
+
+/* Table styles */
+.table-responsive {
+  border-radius: 6px;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.table td {
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* Form labels */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Card shadows */
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Custom select styles */
+.form-select:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 0.2rem rgba(51, 51, 51, 0.25);
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Alert styles */
+.alert {
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Custom container max widths */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Button grid in menu */
+.d-grid.gap-3 .btn {
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.d-grid.gap-3 .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Form validation styles */
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #dc3545;
+}
+
+.is-invalid ~ .invalid-feedback {
+  display: block;
+}
